@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
 
 function Range() {
-    const increment = () => setValue(value +  1)
     const decrement = () => {
         setValue(value - 1)
         value <= 0?setValue(0):""
+    }
+    const increment = () => {
+        setValue(value + 1)
+        value >= 100?setValue(100):""
     }
     const rangeInput = {
         maxWidth:"650px"
